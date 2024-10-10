@@ -24,7 +24,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({
   return <StyledInput
     ref={ref}
     value={value}
-    onChange={onChange}
+    onChange={(e) => onChange && onChange(e.target.value)}
     placeholder={placeholder}
     type={type}
     disabled={disabled}
@@ -39,6 +39,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({
     name={name}
     id={id}
     className={className}
+    data-testid="input-element"
   />
 })
 

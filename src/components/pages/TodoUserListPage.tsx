@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styled from "@emotion/styled";
-import { Text } from "@/components/atoms/text";
+import { Text, Input } from "@/components/atoms";
 
 
 const Container = styled.main`
@@ -10,6 +10,8 @@ const Container = styled.main`
   align-items: center;
   height: 100vh;
   background-color: #f6f6f6;
+  flex-direction: column;
+  gap: 64px;
 `;
 
 interface Props { }
@@ -17,8 +19,15 @@ interface Props { }
 const TodoUserListPage = ({ }: Props) => {
   return (
     <Container>
-      <div>To Do List</div>
       <Text as={'h1'} typography={'title-xxl'}>To Do List</Text>
+
+      <div style={{
+        width: '737px',
+      }}>
+        <Input
+          placeholder="할 일을 입력해주세요."
+        />
+      </div>
     </Container>
   );
 };

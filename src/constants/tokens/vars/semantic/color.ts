@@ -10,6 +10,7 @@ export const text = {
 
 export const fill = {
   primary: 'var(--gray-100)',
+  secondary: 'var(--gray-200)',
   interactive: 'var(--primary-background)',
   checked: 'var(--primary)',
 }

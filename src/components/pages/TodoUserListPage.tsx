@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Text, Input } from "@/components/atoms";
 import { ToDoList } from "@/components/organisms/to-do-list";
+import { ToastProvider } from "@/provider/toast/toast";
 
 
 const Container = styled.main`
@@ -21,25 +22,27 @@ const TodoUserListPage = ({ }: Props) => {
   const [value, setValue] = useState('');
 
   return (
-    <Container>
-      <Text as={'h1'} typography={'title-xxl'}>To Do List</Text>
+    <ToastProvider>
+      <Container>
+        <Text as={'h1'} typography={'title-xxl'}>To Do List</Text>
 
-      <div style={{
-        width: '737px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '32px',
-      }}>
-        <Input
-          placeholder="할 일을 입력해주세요."
-          maxLength={20}
-          value={value}
-          onChange={(e) => setValue(e)}
-        />
+        <div style={{
+          width: '737px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '32px',
+        }}>
+          <Input
+            placeholder="할 일을 입력해주세요."
+            maxLength={20}
+            value={value}
+            onChange={(e) => setValue(e)}
+          />
 
-        <ToDoList></ToDoList>
-      </div>
-    </Container>
+          <ToDoList />
+        </div>
+      </Container>
+    </ToastProvider>
   );
 };
 

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Text, Input } from "@/components/atoms";
+import { ToDoList } from "@/components/organisms/to-do-list";
 
 
 const Container = styled.main`
@@ -25,13 +26,18 @@ const TodoUserListPage = ({ }: Props) => {
 
       <div style={{
         width: '737px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '32px',
       }}>
         <Input
           placeholder="할 일을 입력해주세요."
-          maxLength={5}
-        // value={value}
-        // onChange={(e) => setValue(e)}
+          maxLength={20}
+          value={value}
+          onChange={(e) => setValue(e)}
         />
+
+        <ToDoList></ToDoList>
       </div>
     </Container>
   );

@@ -1,23 +1,21 @@
 import { vars } from "@/constants/tokens";
 import styled from "@emotion/styled";
 import { Text } from "@/components/atoms";
-import { TabSize, TabsProps } from "./tabs.types";
+import { TabSize, TabsProps, Tab } from "./tabs.types";
 
-
-
-export const Tabs = ({ tabs, activeTab, setActiveTab, onChange, size = 'medium' }: TabsProps) => {
+export const Tabs = <T,>({ tabs, activeTab, setActiveTab, onChange, size = 'medium' }: TabsProps<T>) => {
   return (
     <StyledTabs $size={size}>
       {tabs.map((tab) => (
         <button
-          key={tab}
-          className={`tab ${tab === activeTab ? 'active' : ''}`}
+          key={tab.value as unknown as string}
+          className={`tab ${tab.value === activeTab ? 'active' : ''}`}
           onClick={() => {
-            setActiveTab(tab);
-            onChange && onChange(tab);
+            setActiveTab(tab.value);
+            onChange && onChange(tab.value);
           }}
         >
-          <Text typography="text-s-semibold" color={activeTab !== tab ? 'primary' : 'interactive'}>{tab}</Text>
+          <Text typography="text-s-semibold" color={activeTab !== tab.value ? 'primary' : 'interactive'}>{tab.label}</Text>
         </button>
       ))}
     </StyledTabs>
@@ -26,8 +24,6 @@ export const Tabs = ({ tabs, activeTab, setActiveTab, onChange, size = 'medium' 
 
 const StyledTabs = styled.div<{ $size: TabSize }>`
   display: flex;
-  gap: 16px;
-
   .tab {
     width : ${({ $size }) => {
     switch ($size) {
@@ -42,7 +38,7 @@ const StyledTabs = styled.div<{ $size: TabSize }>`
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
-    background-color: #f6f6f6;
+    background-color: ${vars.$semantic.color.fill.white};
     cursor: pointer;
 
     &.active {

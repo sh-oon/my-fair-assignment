@@ -7,7 +7,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({
   value,
   onChange,
   placeholder = "",
-  type,
+  type = "text",
   disabled,
   required,
   maxLength,

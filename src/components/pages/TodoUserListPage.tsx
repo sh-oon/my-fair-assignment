@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Text, Input } from "@/components/atoms";
 
@@ -17,6 +17,8 @@ const Container = styled.main`
 interface Props { }
 
 const TodoUserListPage = ({ }: Props) => {
+  const [value, setValue] = useState('');
+
   return (
     <Container>
       <Text as={'h1'} typography={'title-xxl'}>To Do List</Text>
@@ -26,6 +28,9 @@ const TodoUserListPage = ({ }: Props) => {
       }}>
         <Input
           placeholder="할 일을 입력해주세요."
+          maxLength={20}
+          value={value}
+          onChange={(e) => setValue(e)}
         />
       </div>
     </Container>

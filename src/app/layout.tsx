@@ -1,6 +1,7 @@
 import React from "react";
 import LayoutRecoil from "./layout.recoil";
 import '@/styles/reset.css'
+import '@/styles/global.css'
 
 export const metadata = {
   title: "myfair front pre-course",

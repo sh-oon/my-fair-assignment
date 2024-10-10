@@ -36,7 +36,7 @@
 
   /* typography */
   --typography-title-xxl-font-weight: var(--font-weight-bold);
-  --typography-title-xxl-font-size: var(--font-size-xxxxlarge);
+  --typography-title-xxl-font-size: var(--font-size-xxxxxlarge);
   --typography-title-xxl-line-height: 72px;
 
   --typography-title-xl-font-weight: var(--font-weight-bold);

@@ -1,4 +1,4 @@
-export const typohraphy = {
+export const typography = {
   'title-xxl': {
     fontWeight: 'var(--typography-title-xxl-font-weight)',
     fontSize: 'var(--typography-title-xxl-font-size)',

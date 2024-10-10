@@ -1,2 +1,2 @@
-export * from './color';
-export * from './typohraphy'
+export * as color from './color';
+export * from './typography'

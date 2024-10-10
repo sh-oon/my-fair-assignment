@@ -10,6 +10,7 @@
     "**/*.test.ts?(x)"
   ],
   "compilerOptions": {
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "Node",
     "resolveJsonModule": true,
@@ -41,7 +42,12 @@
       }
     ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@ui-tokens": [
+        "./src/constants/tokens"
+      ]
     }
   }
 }

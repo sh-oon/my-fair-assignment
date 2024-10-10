@@ -1,0 +1,93 @@
+:root {
+  --gray-100: #f6f6f6;
+  --gray-200: #E5E5E5;
+  --gray-300: #B9B9B9;
+  --gray-400: #868686;
+  --gray-500: #454545;
+  --gray-600: #333333;
+  --gray-700: #000000;
+
+  --primary: #2182F3;
+  --primary-background: #EBF4FF;
+
+  --danger: #FF4D4F;
+
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
+  --border-radius-xlarge: 24px;
+
+  --black-alpha-100: rgba(0, 0, 0, 0.12);
+  --black-alpha-50: rgba(0, 0, 0, 0.06);
+
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
+  --font-size-xlarge: 20px;
+  --font-size-xxlarge: 24px;
+  --font-size-xxxlarge: 32px;
+  --font-size-xxxxlarge: 48px;
+  --font-size-xxxxxlarge: 56px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* typography */
+  --typography-title-xxl-font-weight: var(--font-weight-bold);
+  --typography-title-xxl-font-size: var(--font-size-xxxxlarge);
+  --typography-title-xxl-line-height: 72px;
+
+  --typography-title-xl-font-weight: var(--font-weight-bold);
+  --typography-title-xl-font-size: var(--font-size-xxxlarge);
+  --typography-title-xl-line-height: 48px;
+
+  --typography-title-l-font-weight: var(--font-weight-bold);
+  --typography-title-l-font-size: var(--font-size-xxlarge);
+  --typography-title-l-line-height: 36px;
+
+  --typography-title-m-font-weight: var(--font-weight-bold);
+  --typography-title-m-font-size: var(--font-size-xlarge);
+  --typography-title-m-line-height: 28px;
+
+  --typography-title-s-font-weight: var(--font-weight-bold);
+  --typography-title-s-font-size: var(--font-size-large);
+  --typography-title-s-line-height: 24px;
+
+  --typography-title-xs-font-weight: var(--font-weight-bold);
+  --typography-title-xs-font-size: var(--font-size-medium);
+  --typography-title-xs-line-height: 20px;
+
+  --typography-text-xxl-font-weight: var(--font-weight-regular);
+  --typography-text-xxl-font-size: var(--font-size-xxxxlarge);
+  --typography-text-xxl-line-height: 56px;
+
+  --typography-text-xl-font-weight: var(--font-weight-regular);
+  --typography-text-xl-font-size: var(--font-size-xxxlarge);
+  --typography-text-xl-line-height: 40px;
+
+  --typography-text-l-font-weight: var(--font-weight-regular);
+  --typography-text-l-font-size: var(--font-size-xxlarge);
+  --typography-text-l-line-height: 32px;
+
+  --typography-text-m-font-weight: var(--font-weight-regular);
+  --typography-text-m-font-size: var(--font-size-xlarge);
+  --typography-text-m-line-height: 28px;
+
+  --typography-text-s-font-weight: var(--font-weight-regular);
+  --typography-text-s-font-size: var(--font-size-large);
+  --typography-text-s-line-height: 24px;
+
+  --typography-text-s-semibold-font-weight: var(--font-weight-semibold);
+  --typography-text-s-semibold-font-size: var(--font-size-large);
+  --typography-text-s-semibold-line-height: 24px;
+
+  --typography-text-xs-font-weight: var(--font-weight-regular);
+  --typography-text-xs-font-size: var(--font-size-medium);
+  --typography-text-xs-line-height: 16px;
+
+
+  --box-shadow-alpha-100: 0px 16px 32px 0px var(--black-alpha-100);
+  --box-shadow-alpha-50: 0px 0px 6px 0px var(--black-alpha-50);
+}

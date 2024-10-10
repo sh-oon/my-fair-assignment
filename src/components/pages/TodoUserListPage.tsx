@@ -28,9 +28,9 @@ const TodoUserListPage = ({ }: Props) => {
       }}>
         <Input
           placeholder="할 일을 입력해주세요."
-          maxLength={20}
-          value={value}
-          onChange={(e) => setValue(e)}
+          maxLength={5}
+        // value={value}
+        // onChange={(e) => setValue(e)}
         />
       </div>
     </Container>

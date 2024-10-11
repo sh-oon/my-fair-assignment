@@ -2,6 +2,7 @@ import React from "react";
 import LayoutRecoil from "./layout.recoil";
 import '@/styles/reset.css'
 import '@/styles/global.css'
+import { ToastProvider } from "@/provider/toast/toast";
 
 export const metadata = {
   title: "myfair front pre-course",
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <LayoutRecoil>{children}</LayoutRecoil>
+        <ToastProvider>
+          <LayoutRecoil>{children}</LayoutRecoil>
+        </ToastProvider>
       </body>
     </html>
   );

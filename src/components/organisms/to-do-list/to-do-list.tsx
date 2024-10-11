@@ -1,5 +1,7 @@
 import { Tabs } from "@/components/molecules/tabs/tabs"
 import { vars } from "@/constants/tokens";
+import { useToDoList } from "@/hooks/useToDoList";
+import { useToast } from "@/provider/toast/toast";
 import styled from "@emotion/styled";
 import { useState } from "react";
 
@@ -11,6 +13,10 @@ export const ToDoList = ({ }) => {
   ];
   const [activeTab, setActiveTab] = useState(tabs[0].value);
 
+  const { showToast } = useToast();
+
+  const { todos, clearTodos } = useToDoList();
+
   return (
     <Container>
       <Tabs
@@ -19,7 +25,22 @@ export const ToDoList = ({ }) => {
         setActiveTab={(tab) => setActiveTab(tab)}
       />
 
-      <h1>ToDoList</h1>
+      <button onClick={() => showToast('test')}>ToDoList</button>
+      <button onClick={() => clearTodos()}>Clear</button>
+
+      {todos
+        .filter((todo) => {
+          if (activeTab === 'All') return true;
+          if (activeTab === 'To Do') return !todo.completed;
+          if (activeTab === 'Done') return todo.completed;
+          return true;
+        })
+        .map((todo) => (
+          <div key={todo.id}>
+            <span>{todo.title}</span>
+            <span>{todo.completed ? 'Done' : 'To Do'}</span>
+          </div>
+        ))}
     </Container>
   )
 }

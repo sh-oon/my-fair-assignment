@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled';
 import React, { createContext, PropsWithChildren, useContext, useState, useEffect } from 'react';
 
@@ -24,7 +26,7 @@ export const ToastProvider = ({ children }: PropsWithChildren) => {
         setIsVisible(false);
         setTimeout(() => {
           setToastMessage('');
-        }, 500); // 애니메이션 지속 시간과 일치시킴
+        }, 500);
       }, 3000);
 
       return () => clearTimeout(hideTimeout);

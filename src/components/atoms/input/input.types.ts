@@ -1,6 +1,7 @@
 export type InputProps = {
-  value?: string;
-  onChange?: (e: string) => void;
+  value: string;
+  onChange: (e: string) => void;
+  onSubmit?: (e: string) => void;
   placeholder?: string;
   type?: string;
   disabled?: boolean;
